@@ -1,17 +1,21 @@
 <script setup lang="ts">
-import loginLayoutVue from '~~/layouts/loginlayout.vue';
-
 definePageMeta({
-  layout: "loginlayout",
-  title: "Party"
+  layout: false, //this turns off 'default' layout
+  pageTransition: true
 });
+
+useHead({
+  titleTemplate: 'Login | FireDrive',
+})
+
+
 </script>
 
 <!-- --------- template --------  --> 
 
 <template>
 <div>
-  <NuxtLayout name="loginlayout">
+  <NuxtLayout name="login-layout">
     <FormsLoginForm />
   </NuxtLayout>
 </div>

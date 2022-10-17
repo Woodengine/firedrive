@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^5.3.5",
+    "@vueuse/core": "^9.3.0",
     "daisyui": "^2.31.0",
     "firebase": "^9.12.1"
   }

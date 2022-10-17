@@ -4,6 +4,13 @@
 
 # 
 
+## Stack
+
+- Nuxt 3
+- TailwindCSS + DaisyUI
+- Firebase
+
+
 ## Setup
 
 Make sure to install the dependencies:

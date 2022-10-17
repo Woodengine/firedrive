@@ -4,6 +4,7 @@ const submitForm = () => {
     alert("trying to login")
 }
 
+
 </script>
 
 <!-- -- template -- --> 
@@ -21,14 +22,17 @@ const submitForm = () => {
         <h2 class="card-title mb-4">Log in to your drive!</h2>
 
 
-        <form class="grid gap-8 mb-4">
-            <input type="text" placeholder="@email" class="input input-bordered input-info w-full max-w-xs" />
+        <form class="grid gap-5 mb-4">
+            <input type="text" placeholder="your@email" class="input input-bordered input-info w-full max-w-xs" />
 
-            <input type="text" placeholder="Type here" class="input input-bordered input-info w-full max-w-xs" />
+            <input type="text" placeholder="pAssW0rD" class="input input-bordered input-info w-full max-w-xs" />
         </form>
 
-        <button class="btn btn-primary" @click="submitForm">next</button>
-
+        <div class="grid self-center w-full">
+            <button class="btn btn-sm btn-primary w-auto" @click="submitForm">next</button>
+            <NuxtLink to='/signup' class="mt-3 text-center">Signup instead</NuxtLink>
+        </div>
+    
     </div>
 
     </div>
