@@ -1,4 +1,5 @@
 <script setup lang='ts'>
+import OptionBox from '~~/components/Menu/OptionBox.vue';
 
   definePageMeta({
     layout: false,
@@ -11,9 +12,6 @@
     titleTemplate: 'Dashboard | FireDrive',
   })
 
-  const env = useRuntimeConfig()
-  const Logo = env.public.logoUrl
-
 </script>
 
 <!-- -- template -- --> 
@@ -25,23 +23,22 @@
     <template #left-menu>
       <NuxtLayout name="side-bar"> 
         <template #header>
-¡          <img :src="Logo"> <!-- Logo -->
+          <SideBarHeader />
         </template>
 
-        <template #items> 
+        <template #itembox> 
+          <SideBarOptionBox />
         </template>
 
         <template #footer> 
-          <NuxtLayout name="centered"> 
-            <button class="btn btn-active btn-error btn-sm text-white w-32">Add files</button> 
-          </NuxtLayout>
+          <SideBarFooterBtn />
         </template>
       </NuxtLayout>
     </template>
 
   <!-- main      --> 
     <template #theheader>
-      <HeaderDashboardHeader></HeaderDashboardHeader>
+      <MainHeader />
     </template>
 
     <template #main-body>
