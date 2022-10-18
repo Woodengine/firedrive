@@ -1,16 +1,18 @@
 <script setup lang='ts'>
-import OptionBox from '~~/components/Menu/OptionBox.vue';
+import { themeChange } from 'theme-change'
+
+  onMounted(() => themeChange(false));
 
   definePageMeta({
     layout: false,
     middleware: 'index',
     pageTransition: true,
 
-  })
+  });
 
   useHead({
     titleTemplate: 'Dashboard | FireDrive',
-  })
+  });
 
 </script>
 

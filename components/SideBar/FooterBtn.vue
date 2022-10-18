@@ -2,7 +2,7 @@
 
 </script>
 
-<!-- -- template -- -->
+<!-- -- template -- --> 
 <template>
 <div>
     <NuxtLayout name="centered"> 

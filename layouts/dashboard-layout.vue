@@ -1,5 +1,7 @@
 <script setup lang="ts">
-console.log("dashboard-layout.vue")
+
+    console.log("dashboard-layout.vue")
+
 </script>
 
 <!--  ------ template -------  --> 
@@ -7,15 +9,18 @@ console.log("dashboard-layout.vue")
 <template>
 <div class="flex h-full w-full justify-center items-center">
 
-    <div class="grid grid-cols-12 place-content-between max-w-[80rem] w-full">
+    <div class="grid grid-cols-9 sm:grid-cols-12 
+    place-content-between max-w-[80rem] w-full
+    ">
 
-        <div class="h-full col-span-3 bg-slate-800">
-            <slot name="left-menu"> <SharedSkeleton :iterations="4" /> </slot>
+        <div class="h-full col-span-3 bg-blue-100 dark:bg-slate-800 
+        hidden sm:block">
+            <slot name="left-menu"></slot>
         </div>
 
-        <div class="h-screen col-span-9 bg-slate-900">
-            <slot name="theheader"> ( SLOT :: THEHEADER > FALLBACK CONTENT ) </slot>
-            <slot name="main-body"> <SharedSkeleton :iterations="5" /> </slot>
+        <div class="h-screen col-span-9 dark:bg-slate-900 bg-blue-300">
+            <slot name="theheader"></slot>
+            <slot name="main-body"></slot>
         </div>
 
     </div>

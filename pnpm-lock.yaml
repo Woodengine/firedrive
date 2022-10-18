@@ -1,17 +1,21 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@heroicons/vue': ^2.0.12
   '@nuxtjs/tailwindcss': ^5.3.5
   '@vueuse/core': ^9.3.0
   daisyui: ^2.31.0
   firebase: ^9.12.1
   nuxt: 3.0.0-rc.11
+  theme-change: ^2.2.0
 
 dependencies:
+  '@heroicons/vue': 2.0.12_vue@3.2.40
   '@nuxtjs/tailwindcss': 5.3.5_webpack@5.74.0
   '@vueuse/core': 9.3.0_vue@3.2.40
   daisyui: 2.31.0_5zjlt5w4ir2cay3te66iu3k3ji
   firebase: 9.12.1
+  theme-change: 2.2.0
 
 devDependencies:
   nuxt: 3.0.0-rc.11
@@ -833,6 +837,14 @@ packages:
       long: 4.0.0
       protobufjs: 7.1.2
       yargs: 16.2.0
+    dev: false
+
+  /@heroicons/vue/2.0.12_vue@3.2.40:
+    resolution: {integrity: sha512-ypuQl/Wei7BoShO65AdRVikXDaSt6hJBRuKs2pVd/6HvxfEz18oXraH+J5G/QPIwObMEVhMb6nkOs9l3WZv/gA==}
+    peerDependencies:
+      vue: '>= 3'
+    dependencies:
+      vue: 3.2.40
     dev: false
 
   /@ioredis/commands/1.2.0:
@@ -5608,6 +5620,10 @@ packages:
       acorn: 8.8.0
       commander: 2.20.3
       source-map-support: 0.5.21
+
+  /theme-change/2.2.0:
+    resolution: {integrity: sha512-vvgZEEfmH3yZGq2bWHyzs2AOG1SRfNnCvWbEnPzGpdvvCmAWtOsEdg4H6k/OMapegG+LEQvQ76tQoN9B+FT7rg==}
+    dev: false
 
   /through/2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
