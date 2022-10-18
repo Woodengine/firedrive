@@ -11,17 +11,25 @@ const PUBLIC_CLIENT_VARIABLES = {
   logoUrl: '',
 }
 
+const appConfig = {
+  head: {
+    meta: [],
+    script: [],
+    link: [],
+    style: [],
+    noscript: [
+      { children: 'Javascript is required to view this page' }
+    ]
+  }
+}
+
 export default defineNuxtConfig({
   // @ts-ignore
   modules: [nuxtTaildwind],
-
   runtimeConfig: {
     SERVER_PRIVATE_VARIABLES,
     public: PUBLIC_CLIENT_VARIABLES
-    
   },
+  app: appConfig
 
 });
-
-
-
