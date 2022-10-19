@@ -1,6 +1,7 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 
 const nuxtTaildwind = '@nuxtjs/tailwindcss';
+const nuxtIcon = 'nuxt-icon';
 
 const SERVER_PRIVATE_VARIABLES = {
   firebaseToken: ''
@@ -25,7 +26,7 @@ const appConfig = {
 
 export default defineNuxtConfig({
   // @ts-ignore
-  modules: [nuxtTaildwind],
+  modules: [nuxtTaildwind, nuxtIcon],
   runtimeConfig: {
     SERVER_PRIVATE_VARIABLES,
     public: PUBLIC_CLIENT_VARIABLES

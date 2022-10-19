@@ -7,8 +7,8 @@
 
 <template>
 <div>
-    <div class="w-full h-[50pt] bg-blue-900">
-
+    <div class="flex place-content-center w-full h-[5rem]">
+        <input type="text" placeholder="Type here" class="input input-ghost border-b-2 border-0 w-full mx-4 my-3" />
     </div>
 </div>
 </template>
