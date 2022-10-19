@@ -1,7 +1,8 @@
 <template>
-<div class="flex flex-col h-screen justify-between">
-
-    <div class="w-full h-32 flex justify-center pt-4 mt-8"> 
+<div class="grid grid-cols-1 gap-4 place-items-stretch h-full"> 
+    
+    <div class="flex justify-center
+    w-full h-32"> 
         <slot name="header"> <SharedSkeleton :iterations="4" /> </slot>
     </div>
 
@@ -9,9 +10,11 @@
         <slot name="itembox"> <SharedSkeleton :iterations="4" /> </slot>
     </div>
 
-    <div class="flex place-content-center w-full h-32 col-start-1 col-end-7">
+    <!-- <div class="flex place-content-center w-full h-40 border col-start col-end"> -->
+    <footer class="flex justify-center
+    w-full h-40">
         <slot name="footer">(Footer)</slot>
-    </div>
-
+    </footer>
 </div>
+
 </template>

@@ -1,12 +1,12 @@
 <script setup lang='ts'>
   const env = useRuntimeConfig()
   const appName = env.public.appName
-  const styles = 'w-[30px] mx-3 mt-[-7pt] mb-8';
+  const styles = 'w-[30px] mx-3 mb-2';
 </script>
 
 <!-- -- template -- --> 
 <template>
-<div class="flex">
+<div class="flex justify-center items-center h-full">
     <div :class="styles" onselectstart="return false">
         <img src="~/assets/img/logo.svg" > <!-- Logo -->
     </div>
