@@ -10,12 +10,24 @@
 <div class="flex h-full w-full justify-center items-center">
 
     <div class="grid grid-cols-9 sm:grid-cols-12 
-    place-content-between max-w-[80rem] w-full
-    ">
+    place-content-between max-w-[80rem] w-full">
 
         <div class="h-full col-span-3 bg-blue-100 dark:bg-slate-800 
         hidden sm:block">
-            <slot name="left-menu"></slot>
+              <!-- left-menu      -->
+            <NuxtLayout name="side-bar"> 
+                <template #header>
+                <SideBarHeader />
+                </template>
+
+                <template #itembox> 
+                <SideBarOptionBox />
+                </template>
+
+                <template #footer> 
+                <SideBarFooterBtn />
+                </template>
+            </NuxtLayout>
         </div>
 
         <div class="h-screen col-span-9 dark:bg-slate-900 bg-blue-300">
