@@ -14,6 +14,8 @@ import { themeChange } from 'theme-change'
     titleTemplate: 'Dashboard | FireDrive',
   });
 
+  const displayBorders = 1
+
 </script>
 
 <!-- -- template -- --> 
@@ -27,7 +29,15 @@ import { themeChange } from 'theme-change'
     </template>
 
     <template #main-body>
-      
+      <NuxtLayout name="main-body-content-layout">
+        <template #main>
+          <MainBodyContent />
+        </template>
+
+        <template #side>
+          <MainBodySideContent />
+        </template>
+      </NuxtLayout>
     </template>
 
 </NuxtLayout>

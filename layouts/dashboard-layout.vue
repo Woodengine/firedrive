@@ -6,6 +6,7 @@
 
 <!--  ------ template -------  --> 
 <template>
+    
 <div class="flex w-full min-h-screen justify-center items-center bg-zinc-200">
 
     <div class="grid grid-cols-9 sm:grid-cols-12
@@ -18,8 +19,7 @@
         <!-- LEFT SIDE BAR      --> 
         <div class="h-fit col-span-3 
         hidden sm:block
-        bg-blue-100 dark:bg-slate-800
-        ">
+        bg-blue-100 dark:bg-slate-800">
             <NuxtLayout name="side-bar"> 
                 <template #header>
                 <SideBarHeader />
@@ -35,15 +35,26 @@
             </NuxtLayout>
         </div>
 
-        <!-- MAIN SECTION  -->
-        <div class="h-full min-h-[57rem]
-        col-span-9 
+        <!-- MAIN SECTION  --> 
+        <div class="col-span-9
         dark:bg-slate-900 bg-blue-300">
-            <slot name="theheader"></slot>
-            <slot name="main-body"></slot>
+            
+            <div class="grid grid-cols-1">
+
+                <div class="w-full h-full">
+                    <slot name="theheader"></slot>
+                </div>    
+                
+                <div class="max-w-[59rem]
+                w-full h-full min-h-[52rem]">
+                    <slot name="main-body"></slot>
+                </div>
+                
+            </div>
         </div>
 
     </div>
 
 </div>
+
 </template>
