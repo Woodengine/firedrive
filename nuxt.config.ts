@@ -27,6 +27,9 @@ const appConfig = {
 export default defineNuxtConfig({
   // @ts-ignore
   modules: [nuxtTaildwind, nuxtIcon],
+  build: {
+    transpile: ['@formkit/auto-animate'],
+  },
   runtimeConfig: {
     SERVER_PRIVATE_VARIABLES,
     public: PUBLIC_CLIENT_VARIABLES

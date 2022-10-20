@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@formkit/auto-animate': 1.0.0-beta.3
   '@nuxtjs/tailwindcss': ^5.3.5
   '@vueuse/core': ^9.3.0
   daisyui: ^2.31.0
@@ -10,6 +11,7 @@ specifiers:
   theme-change: ^2.2.0
 
 dependencies:
+  '@formkit/auto-animate': 1.0.0-beta.3
   '@nuxtjs/tailwindcss': 5.3.5_webpack@5.74.0
   '@vueuse/core': 9.3.0_vue@3.2.40
   daisyui: 2.31.0_5zjlt5w4ir2cay3te66iu3k3ji
@@ -805,6 +807,10 @@ packages:
 
   /@firebase/webchannel-wrapper/0.8.0:
     resolution: {integrity: sha512-Q8erQds5LuAUgNuFOt/tu/abffYUHYxN+Ogp2V5EOssfFG7Ja4ce324Sqyq41u/vB5CSr+tfYS3JzTDrDxCvdw==}
+    dev: false
+
+  /@formkit/auto-animate/1.0.0-beta.3:
+    resolution: {integrity: sha512-glsi+ytwQpxT/Ctr9GtcIfVr4dO6mJ04mQbNU8MFSdCdqMopHtyfU5Fib0+9lNFIeR0luY4/0NW95/2R5pKsag==}
     dev: false
 
   /@grpc/grpc-js/1.7.2:

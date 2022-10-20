@@ -6,15 +6,15 @@
 
 <!--  ------ template -------  --> 
 <template>
-    
+
 <div class="flex w-full min-h-screen justify-center items-center bg-zinc-200">
 
     <div class="grid grid-cols-9 sm:grid-cols-12
-    w-full
+    w-full 
     xl:rounded-l-2xl xl:pl-3 bg-slate-800
     place-content-between
     min-h-[57rem]
-    max-w-[80rem]">
+    max-w-[78rem]">
 
         <!-- LEFT SIDE BAR      --> 
         <div class="h-fit col-span-3 
