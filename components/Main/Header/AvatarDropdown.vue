@@ -1,9 +1,16 @@
 <script setup lang='ts'>
 import { useAutoAnimate } from '@formkit/auto-animate/vue'
 
-const toggleOptions = ref(false)
+const toggleOptions = ref(false);
 
-const [parent] = useAutoAnimate({ duration: 270, easing: 'ease-in' }) 
+const [parent] = useAutoAnimate({ duration: 200, easing: 'ease-out' }) 
+
+const userOptions = [
+    {path:'/setting', name:'Account settings', icon: 'mdi:settings'},
+    {path:'/firebase-settings', name:'Firebase settings',icon: 'mdi:fire'},
+    {path:'/help', name:'Help', icon: 'mdi:help'},
+    {path:'/logout', name:'Logout', icon:'mdi:logout'},
+]
 
 </script>
 
@@ -14,47 +21,38 @@ const [parent] = useAutoAnimate({ duration: 270, easing: 'ease-in' })
     <div class="relative mt-5" ref="parent">
 
     <div class="avatar z-50">
-
         <div class="w-50 h-10
         rounded-full 
         ring
         ring-primary
         ring-offset-base-100
         ring-offset-2" role="button"
-        v-on:click="toggleOptions= !toggleOptions">
+        v-on:click="toggleOptions = true">
             <img src="https://placeimg.com/194/194/people" />
         </div>
     </div>
 
-    <div  class="absolute 
-    rounded-xl 
-    z-40
+    <div v-on:mouseleave="toggleOptions = false"  
+    class="absolute z-40
+    rounded-b-xl 
+    rounded-tl-xl
+    shadow-sm
+    shadow-purple-900 
     p-4 
-    right-0
-    top-14 
-    w-[13rem]
+    right-2
+    top-1
+    w-[15rem]
     bg-slate-700"
     v-if="toggleOptions"> 
 
-
-    <ul class="w-[11rem]
-        text-zinc-300 font-bold grid grid-cols-1 gap-5">
-        <li>
-            <NuxtLink to="/setting" class="w-full">Account settings</NuxtLink> 
-        </li>
-
-        <li>
-            <NuxtLink to="/help">Help</NuxtLink>
-        </li>
-
-        <li>
-            <NuxtLink to="/firebase-settings">Firebase settings</NuxtLink>
-        </li>
-        
-        <li>
-            <NuxtLink to="/logout">Logout</NuxtLink>
-        </li>
-    </ul>
+        <div class="w-[11rem] text-zinc-300 font-bold grid grid-cols-1 gap-1">
+            <template v-for="{path, name, icon} in userOptions">
+                <NuxtLink :to="path" class="py-1.5 pl-4 -mx-4 hover:text-purple-500"> 
+                    <Icon :name="icon" class="h-5 w-6 text-purple-500"/>
+                    {{ name }}
+                </NuxtLink> 
+            </template>
+        </div>
 
     </div>
 
